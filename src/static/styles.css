@@ -4,6 +4,7 @@
   --primary: #1a237e;
   --primary-light: #534bae;
   --primary-dark: #000051;
+  --primary-heading: #1a237e;
   --primary-text: #ffffff;
 
   /* Secondary colors */
@@ -30,6 +31,25 @@
   --error-light: #ffebee;
   --info: #0c5460;
   --info-light: #d1ecf1;
+}
+
+body[data-theme="dark"] {
+  color-scheme: dark;
+  --primary: #3949ab;
+  --primary-light: #5967b5;
+  --primary-dark: #202a68;
+  --primary-heading: #aab4ff;
+  --background: #121418;
+  --surface: #1e2229;
+  --text-primary: #e8eaf0;
+  --text-secondary: #b0b6c3;
+  --border: #3b414c;
+  --border-light: #303640;
+  --border-focus: #596273;
+  --success-light: #1d3b2b;
+  --warning-light: #493b19;
+  --error-light: #421f24;
+  --info-light: #183a43;
 }
 
 * {
@@ -91,7 +111,7 @@ section h3 {
   margin-bottom: 15px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
-  color: var(--primary);
+  color: var(--primary-heading);
   font-size: 1.1rem;
 }
 
@@ -113,7 +133,7 @@ section h3 {
   margin-bottom: 15px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
-  color: var(--primary);
+  color: var(--primary-heading);
   font-size: 1.1rem;
 }
 
@@ -171,7 +191,7 @@ section h3 {
 
 .activity-card h4 {
   margin-bottom: 8px;
-  color: var(--primary);
+  color: var(--primary-heading);
   font-size: 1rem;
   letter-spacing: 0.3px;
   padding-bottom: 6px;
@@ -246,7 +266,7 @@ section h3 {
 }
 
 .participants-list h5 {
-  color: var(--primary);
+  color: var(--primary-heading);
   margin-bottom: 5px;
   font-size: 0.8em;
 }
@@ -445,7 +465,7 @@ button {
 
 /* Login modal specific styling */
 #login-modal .modal-content h3 {
-  color: var(--primary);
+  color: var(--primary-heading);
   font-size: 1.2rem;
   margin-bottom: 15px;
   text-align: center;
@@ -492,6 +512,12 @@ footer {
   border-radius: 20px 0 0 20px;
   font-size: 0.85rem;
   transition: all 0.3s ease;
+}
+
+input {
+  color: var(--text-primary);
+  background-color: var(--surface);
+  border-color: var(--border);
 }
 
 .search-box input:focus {
@@ -621,6 +647,9 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 #user-status {
